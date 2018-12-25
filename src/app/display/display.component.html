@@ -1,0 +1,13 @@
+<table class="table table-hover">
+  <thead>
+  <tr>
+      <td>Transaction Id</td>
+      <td>Amount</td>
+  </tr>
+  </thead>
+  <tbody>
+      <tr *ngFor="let tx of trans | async">
+          <td>{{ tx.transId }}</td>
+          <td>{{ tx.amount }}</td>
+      </tr>
+  </tbody>
