@@ -1,6 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { StoreModule, MetaReducer } from '@ngrx/store';
+import { StoreModule } from '@ngrx/store';
 import { ReactiveFormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
@@ -11,16 +11,11 @@ import { HttpModule } from '@angular/http';
 import { BalanceComponent } from './balance/balance.component';
 import {Routes, RouterModule} from '@angular/router';
 
-import {metaReducers} from './reducers/transHistory.reducer'
-
 const appRoutes: Routes = [
   { path: '', component: transHistoryComponent},
   { path: 'balance', component: BalanceComponent}
 
  ];
-
- 
-
 
 @NgModule({
   declarations: [
@@ -33,13 +28,10 @@ const appRoutes: Routes = [
     BrowserModule,HttpModule,
     RouterModule.forRoot(
       appRoutes),
-    StoreModule.forRoot({transHistory: addTransHistReducer},{metaReducers}),
+    StoreModule.forRoot({transHistory: addTransHistReducer}),
     ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
 })
-
-
-
 export class AppModule { }
