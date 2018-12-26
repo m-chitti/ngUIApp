@@ -13,7 +13,7 @@ import { Router } from '@angular/router';
 export class transHistoryComponent implements OnInit {
   angForm: FormGroup;
 
-  private url ='http://localhost:8080/fsapi';
+  private url ='https://springbootbeapp.appspot.com/fsapi';
   data:TransactionHistory;
 
   constructor(private store: Store<AppState>,private http: Http,private router: Router) {
