@@ -16,7 +16,7 @@ steps:
 - name: 'gcr.io/cloud-builders/npm'
   args: ['install','-g','@angular/cli@1.7.4' ]
 - name: 'gcr.io/cloud-builders/npm'
-  args: ['install','-g','@ngrx/store' ]
+  args: ['install','--save','@ngrx/store' ]
 # Install Dependencies
 - name: 'gcr.io/cloud-builders/npm'
   args: ['install']
