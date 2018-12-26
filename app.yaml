@@ -1,9 +1,16 @@
-runtime: python27
-api_version: 2
-threadsafe: true
+# [START runtime]
+runtime: nodejs10
+# [END runtime]
 handlers:
+- url: /(.+)
+  static_files: dist/\1
+  upload: dist/(.*)
+  secure: always
 - url: /
   static_files: dist/index.html
   upload: dist/index.html
-- url: /
-  static_dir: dist
+  secure: always
+instance_class: F2
+automatic_scaling:
+  max_instances: 2
+  min_instances: 1
