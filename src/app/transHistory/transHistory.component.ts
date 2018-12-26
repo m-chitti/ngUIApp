@@ -5,12 +5,10 @@ import { Component, OnInit } from '@angular/core';
 import { Store } from '@ngrx/store';
 import {Http,Response} from '@angular/http';
 import { Router } from '@angular/router';
-import { Storage } from '../reducers/transHistory.reducer';
 
 @Component({
   selector: 'app-transHistory',
-  templateUrl: './transHistory.component.html',
-  styleUrls: ['./transHistory.component.css']
+  templateUrl: './transHistory.component.html'
 })
 export class transHistoryComponent implements OnInit {
   angForm: FormGroup;
@@ -20,10 +18,7 @@ export class transHistoryComponent implements OnInit {
 
   constructor(private store: Store<AppState>,private http: Http,private router: Router) {
     
-      this.makeRequest();
-    
   }
-
 
 
   makeRequest(): void {

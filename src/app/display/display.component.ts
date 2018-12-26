@@ -6,8 +6,7 @@ import { Observable } from 'rxjs/Observable';
 
 @Component({
   selector: 'app-display',
-  templateUrl: './display.component.html',
-  styleUrls: ['./display.component.css']
+  templateUrl: './display.component.html'
 })
 export class DisplayComponent implements OnInit {
 

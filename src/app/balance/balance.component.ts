@@ -6,8 +6,7 @@ import { Observable } from 'rxjs/Observable';
 
 @Component({
   selector: 'app-balance',
-  templateUrl: './balance.component.html',
-  styleUrls: ['./balance.component.css']
+  templateUrl: './balance.component.html'
 })
 export class BalanceComponent implements OnInit {
 
